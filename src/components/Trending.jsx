@@ -3,6 +3,7 @@ import aiWritingImg from "../Gambar/Man and robot with computers sitting togethe
 import aiImgGen from "../Gambar/futuristic-half-robot-tiger.jpg";
 import analysisImg from "../Gambar/futuristic-ai-dashboard-display.jpg";
 import supportImg from "../Gambar/female-programmer-scanning-her-face-with-biometric-security-technology-virtual-screen-digital-remix.jpg";
+import calenderImg from "../Gambar/CalenderAI.jpg"
 
 function Trending(){
     const trendingData = [
@@ -33,6 +34,13 @@ function Trending(){
             image: supportImg,
             title: "AI costumer support",
             description: "Provide 24/7 automated customer service with instant, friendly answers to boost sales."
+        },
+        {
+            id: 5,
+            href: "#",
+            image: calenderImg,
+            title: "CalAI",
+            description: "Intelligently schedules your week with AI."
         }
     ];
 
@@ -46,7 +54,6 @@ function Trending(){
                         image={item.image}
                         title={item.title}
                         description={item.description}
-                        className="trending-item"
                         imageAlt="trending img"
                     />
                 ))}

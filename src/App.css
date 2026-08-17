@@ -1,6 +1,5 @@
+@reference "./index.css";
 
-
-/* Custom Components */
 @layer components {
   .logo {
     @apply text-lg font-bold text-black;
@@ -48,7 +47,7 @@
 
   .hero {
     @apply flex justify-center items-center py-12 px-12 bg-cover bg-center;
-    background-image: url(Gambar/360_F_308697506_9dsBYHXm9FwuW0qcEqimAEXUvzTwfzwe.jpg);
+    background-image: url(/src/Gambar/360_F_308697506_9dsBYHXm9FwuW0qcEqimAEXUvzTwfzwe.jpg);
   }
 
   .tag {

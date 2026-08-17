@@ -45,13 +45,13 @@ function Categories(){
     ];
 
     return (
-        <section id="categories" className="p-[50px] flex flex-col items-center bg-grey-color">
+        <section id="categories" className="p-[50px] flex flex-col items-center bg-grey">
             <h2 className="text-[36px] font-bold text-primary mb-[40px]">
                 Categories
             </h2>
             <div className="grid grid-cols-5 gap-[20px] max-w-[1000px] mx-auto mt-[40px]">
                 {categoriesData.map((category) => (
-                    <a key={category.id} href={category.href} className="categories-list">
+                    <a key={category.id} href={category.href} >
                         <Card
                             image={category.image}
                             title={category.title}

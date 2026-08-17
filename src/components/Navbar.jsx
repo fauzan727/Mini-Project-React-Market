@@ -22,7 +22,7 @@ function Navbar(){
             
             <div className="flex gap-[12px]">
                 <Button variant="primary">Log in</Button>
-                <Button variant="outline" className="text-white border-white hover:bg-white hover:text-black">Sign up</Button>
+                <Button variant="primary">Sign up</Button>
             </div>
         </header>
     )
