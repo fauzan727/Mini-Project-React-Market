@@ -17,11 +17,11 @@ function Hero() {
             Tech Market
             </span>
 
-            <h1 className="mt-4 text-4xl font-bold text-white">
+            <h1 className="mt-4 text-4xl font-bold text-black drop-shadow-md">
             Your Marketplace for Digital Products & AI Tools
             </h1>
 
-            <p className="mt-5 text-lg text-white">
+            <p className="mt-5 text-lg text-black drop-shadow-sm">
             Find the best software, AI solutions, and digital resources to improve
             your workflow and unlock new possibilities.
             </p>
