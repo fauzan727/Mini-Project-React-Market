@@ -56,7 +56,7 @@ function Categories(){
                             image={category.image}
                             title={category.title}
                             description={category.description}
-                            className="categories-card"
+                            className="categories-card h-full"
                             imageAlt={`${category.title} Image`}
                         />
                     </a>
