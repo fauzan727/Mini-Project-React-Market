@@ -1,11 +1,11 @@
 import { Navigate } from "react-router-dom"
 
 
-function RoleRroute({ role, izin, users}){
+function RoleRroute({ role, izin, children}){
     if(role !== izin){
         return <Navigate to="/dashboard" replace />
     }
-    return users
+    return children
 }
 
 export default RoleRroute

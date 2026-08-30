@@ -13,6 +13,7 @@ function useFetch(endpoint = null) {
     lastEndpoint.current = endpoint
     setLoading(endpoint !== null)
     setError(null)
+    setData(null)
   }
 
   useEffect(() => {

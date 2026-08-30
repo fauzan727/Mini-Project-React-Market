@@ -68,7 +68,7 @@ function Login({onLogin}){
                 </button>
         
                 <p className="text-center text-xs text-gray-400 mt-4">
-                Coba: emilys / emilyspass
+                Coba: johnd / m38rmF$ || mor_2314 / 83r5^_
                 </p>
             </form>
         </div>
