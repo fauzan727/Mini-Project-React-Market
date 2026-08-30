@@ -37,7 +37,7 @@ function Login({onLogin}){
         
                 <div className="mb-4">
                 <input
-                    type="username"
+                    type="text"
                     placeholder="Username"
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
