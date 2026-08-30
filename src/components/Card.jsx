@@ -29,11 +29,11 @@ function Card({
       onClick={onClick}
     >
         {image && (
-            <div className="p-2">
+            <div className="h-48 w-full flex items-center justify-center bg-gray-50 rounded-lg p-3 mb-4">
                 <img
                     src={image}
                     alt={imageAlt}
-                    className="w-full rounded-lg object-cover"
+                    className="max-h-full max-w-full object-contain mix-blend-multiply"
                 />
             </div>
         )}

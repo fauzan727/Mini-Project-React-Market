@@ -4,14 +4,11 @@ function Users() {
   // Ambil data dan status loading murni dari custom hook kamu
   const { data, loading } = useFetch('/users?limit=10')
   
-  // 1. Ekstrak data menggunakan variabel let murni (Aman dari infinite loop)
   let users = [];
   if (data) {
     if (data.users && Array.isArray(data.users)) {
-      // Jika menggunakan DummyJSON (data dibungkus di dalam properti .users)
       users = data.users;
     } else if (Array.isArray(data)) {
-      // Jika menggunakan FakeStoreAPI (respons berupa array murni langsung)
       users = data;
     }
   }
@@ -22,14 +19,12 @@ function Users() {
         Data Users
       </h1>
 
-      {/* 2. KUNCI UTAMA: Tampilkan loading di sini agar Navbar di atas tidak ikut tertutup */}
       {loading ? (
         <div className="bg-white rounded-2xl shadow-sm p-20 text-center border border-gray-100">
           <div className="inline-block w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin mb-3"></div>
           <p className="text-gray-500 font-medium">Memuat data user...</p>
         </div>
       ) : (
-        /* TABLE: READ ONLY */
         <div className="bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-100">
           <table className="w-full text-left">
             <thead className="bg-gray-50 border-b border-gray-200">
