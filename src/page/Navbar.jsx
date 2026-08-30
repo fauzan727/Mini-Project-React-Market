@@ -28,9 +28,9 @@ function Navbar({ user, onLogout }){
                 <NavLink to="/products" className={style}>product</NavLink>
                 <NavLink to="/carts" className={style}>cart</NavLink>
                 {user && <NavLink to="/users" className={style}>Users</NavLink>}
-                {user?.role === 'admin' && <NavLink to="/admin" className={style}>Admin</NavLink>}
+                {user && <NavLink to="/admin" className={style}>Admin</NavLink>}
             </div>
-            
+            {/* ?.role === 'admin' */}
            <span className="flex items-center gap-4 justify-self-end">
                 {user ? (
                 <>

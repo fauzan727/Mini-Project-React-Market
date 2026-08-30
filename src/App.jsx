@@ -9,7 +9,7 @@ import Users from './page/user';
 import ProtectedRoute from './components/ProtectedRoute.jsx'
 import { useState } from 'react';
 import useFetch from './hooks/useFetch.js';
-import RoleRroute from "./components/RoleRoute";
+// import RoleRroute from "./components/RoleRoute";
 import AdminPanel from './components/AdminPanel.jsx'
 
 function App() {
@@ -74,9 +74,9 @@ function App() {
           <Route path="/admin"
             element={
               <ProtectedRoute >
-                <RoleRroute role={user?.role} izin="admin">
+                {/* <RoleRroute role={user?.role} izin="admin"> */}
                   <AdminPanel />
-                </RoleRroute>
+                {/* </RoleRroute> */}
               </ProtectedRoute>
             }
           />
