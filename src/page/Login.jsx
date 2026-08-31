@@ -27,6 +27,23 @@ function Login({onLogin}){
             return
         }
 
+        const savedUser = localStorage.getItem('user');
+
+        if(savedUser){
+            const userData = JSON.parse(savedUser)
+
+            const USERNAME_ADMIN = "johnd"
+
+            if(userData.username === USERNAME_ADMIN){
+                userData.role = "admin"
+            }else{
+                userData.role = "user"
+            }
+
+            localStorage.setItem('user', JSON.stringify(userData));
+        }
+        
+
         navigate('/dashboard')
     }
 

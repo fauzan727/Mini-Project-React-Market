@@ -2,13 +2,10 @@ import { useState } from "react"
 import useFetch from "../hooks/useFetch"
 
 function AdminPanel() {
-  // 1. Fetch products data and load network action methods
   const { data: productsData, loading, post, put, del } = useFetch("/products")
   
-  // Safe array fallback handler
   const products = Array.isArray(productsData) ? productsData : (productsData?.products || [])
 
-  // --- LOCAL FORM STATES ---
   const [title, setTitle] = useState("")
   const [price, setPrice] = useState("")
   const [description, setDescription] = useState("")
@@ -25,7 +22,6 @@ function AdminPanel() {
     setImage("")
   }
 
-  // --- ACTION: CREATE (POST) / UPDATE (PUT) ---
   async function handleSubmit(e) {
     e.preventDefault()
 

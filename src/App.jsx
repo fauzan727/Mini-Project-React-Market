@@ -28,12 +28,16 @@ function App() {
         return data.message
       }
 
+      const roleBaru = username === 'johnd' ? 'admin' : (data.role || 'user');
+
       const userData = {
         username: data.username,
         email: data.email,
-        role: data.role,
+        role: roleBaru,
         token: data.token
       }
+
+
 
       setUser(userData)
       localStorage.setItem('user', JSON.stringify(userData))
