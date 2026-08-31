@@ -58,7 +58,7 @@ function App() {
       <Navbar user={user} onLogout={logout}/>
       
       {/* Konten Utama Aplikasi */}
-      <main style={{ marginTop: '70px', padding: '20px' }}>
+      <main>
         <Routes>
           <Route path="/" element={<Dashboard />} />
           
