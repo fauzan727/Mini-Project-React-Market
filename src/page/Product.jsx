@@ -3,14 +3,11 @@ import Card from "../components/Card"
 import useFetch from "../hooks/useFetch"
 
 function Products() {
-  // 1. Fetch dynamic product list from API
   const { data: products, loading, error } = useFetch("/products");
 
-  // 2. Local states to manage selected filter and category array list
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [categories, setCategories] = useState([]);
 
-  // 3. Separate side-effect to fetch categories seamlessly
   useEffect(() => {
     const baseUrl = import.meta.env.VITE_API_URL || 'https://fakestoreapi.com';
     
@@ -22,7 +19,6 @@ function Products() {
       .catch(() => setCategories([]));
   }, []);
 
-  // --- YOUR EXACT PREFERRED CONDITIONAL CHECKS ---
   if (loading) {
     return <div className="text-center py-10 text-primary">Memuat produk...</div>;
   }
@@ -32,7 +28,6 @@ function Products() {
   }
   // -----------------------------------------------
 
-  // 4. Standard array filtering block (No useMemo used)
   let filteredProducts = [];
   if (products && Array.isArray(products)) {
     if (selectedCategory === "All") {
